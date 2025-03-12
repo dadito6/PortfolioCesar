@@ -17,7 +17,7 @@ const projects = [
     title: "Juego de Memoria Python",
     description: "Aplicación interactiva desarrollada con PySimpleGUI",
     image: "/PyGame.png",
-    Link:"https://github.com/dadito6/juego_memoria" ,
+    link:"https://github.com/dadito6/juego_memoria" ,
     tech: ["Python", "PySimpleGUI", "CSV", "Pandas"],
   },
   {
@@ -80,9 +80,9 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
             ))}
         </div>
         {project.link && (
-          <Link
+          <Link target="_blank"
             href={project.link}
-            className="inline-block px-6 py-2 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+            className="inline-block px-6 py-2 bg-white hover:bg-slate-500 rounded-full text-sky-950 transition-colors"
           >
             Ver proyecto
           </Link>

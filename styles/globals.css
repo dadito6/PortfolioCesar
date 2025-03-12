@@ -84,6 +84,23 @@ body {
   }
 }
 
+.enlace-linkedin {
+  text-decoration: none;
+  color: #0077B5; /* Azul de LinkedIn */
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.enlace-linkedin:hover {
+  color: #0057B7; /* Azul oscuro de LinkedIn */
+  text-decoration: none;
+}
+
+.enlace-linkedin:focus {
+  color: #0057B7; /* Azul oscuro de LinkedIn */
+  text-decoration: none;
+  box-shadow: 0 0 0 2px #0077B5; /* Sombra azul */
+}
 @layer base {
   * {
     @apply border-border;

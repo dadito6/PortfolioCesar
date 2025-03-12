@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Cesar Rea - Desarrollador Frontend",
   description:
     "Portfolio personal de Cesar Rea, desarrollador frontend especializado en React y tecnologías web modernas.",
+  
 }
 
 export default function RootLayout({

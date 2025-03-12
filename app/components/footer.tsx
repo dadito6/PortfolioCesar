@@ -12,7 +12,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="hover:text-gray-400 transition-colors"
           >
-            <Github size={24} />
+            <Github size={40} />
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
@@ -21,7 +21,7 @@ export function Footer() {
             rel="noopener noreferrer"
             className="hover:text-gray-400 transition-colors"
           >
-            <Linkedin size={24} />
+            <Linkedin size={40} />
             <span className="sr-only">LinkedIn</span>
           </Link>
           <Link
@@ -30,12 +30,12 @@ export function Footer() {
             rel="noopener noreferrer"
             className="hover:text-gray-400 transition-colors"
           >
-            <MessageCircle size={24} />
+            <MessageCircle size={40} />
             <span className="sr-only">WhatsApp</span>
           </Link>
         </div>
         <div className="text-center mt-4">
-          <p>&copy; {new Date().getFullYear()} Cesar Rea. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Desarrollado por Cesar Rea.</p>
         </div>
       </div>
     </footer>

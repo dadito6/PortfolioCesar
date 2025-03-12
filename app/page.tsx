@@ -7,6 +7,8 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei"
 import { Projects } from "./components/projects"
 import { Laptop } from "./components/laptop"
 import { Footer } from "./components/footer" // Añade esta línea
+import { Link } from "lucide-react"
+import "../styles/globals.css"
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -15,8 +17,8 @@ export default function Home() {
     offset: ["start start", "end start"],
   })
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.8])
+  const opacity = useTransform(scrollYProgress, [0, 0.9], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.9], [1, 0.8])
 
   return (
     <div ref={containerRef} className="bg-[#0a051c]">
@@ -27,29 +29,36 @@ export default function Home() {
       >
         <div className="absolute inset-0">
           <Canvas>
-            <PerspectiveCamera makeDefault position={[0, 0, 5]} />
+            <PerspectiveCamera makeDefault position={[0, 0, 6]} />
             <OrbitControls enableZoom={false} />
-            <ambientLight intensity={0.5} />
+            <ambientLight intensity={0.1} />
             <pointLight position={[10, 10, 10]} />
             <Laptop />
           </Canvas>
         </div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="text-5xl md:text-7xl font-bold text-white text-center z-10"
+          className="text-5xl md:text-7xl font-bold text-white bg-clip-padding text-center z-10 " 
         >
-          Cesar Rea
+          👋 Hola, soy <a 
+  target="_blank" 
+  rel="noopener noreferrer"
+  href="https://www.linkedin.com/in/cesar-rea-275620304/"
+  className="enlace-linkedin"
+>
+  Cesar Rea
+</a>
         </motion.h1>
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 200 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 1 }}
           className="text-2xl md:text-3xl text-gray-400 mt-4 text-center z-10"
         >
-          ⬇ Desarrollador 
+          ⬇ Desarrollador de Software
         </motion.h2>
       </motion.section>
       {/* Projects Section */}

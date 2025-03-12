@@ -101,6 +101,31 @@ body {
   text-decoration: none;
   box-shadow: 0 0 0 2px #0077B5; /* Sombra azul */
 }
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Ajusta la disposición de los elementos */
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ajusta los tamaños de fuente */
+  .titulo {
+    font-size: 18px;
+  }
+  
+  /* Ajusta la navegación */
+  .navegacion {
+    display: none;
+  }
+  
+  /* Ajusta la altura de la sección de hero */
+  .hero {
+    height: 300px;
+  }
+}
 @layer base {
   * {
     @apply border-border;

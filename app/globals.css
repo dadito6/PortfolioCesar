@@ -17,6 +17,36 @@ body {
   box-sizing: border-box;
   background: #0a051c;
   color: white;
+  -webkit-overflow-scrolling: touch; /* Mejora el scroll en iOS */
+  overscroll-behavior-y: contain; /* Previene el scroll bounce */
+}
+
+/* Mejoras específicas para móviles */
+@media (max-width: 768px) {
+  * {
+    touch-action: manipulation; /* Optimiza eventos táctiles */
+    -webkit-tap-highlight-color: transparent; /* Elimina el highlight al tocar */
+  }
+  
+  body {
+    scroll-padding: 1rem; /* Añade padding al scroll para mejor UX */
+    scrollbar-width: thin; /* Barra de scroll más delgada en Firefox */
+  }
+
+  /* Personalización de la barra de scroll para Webkit (Chrome, Safari) */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+  }
 }
 
 @layer utilities {

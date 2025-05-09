@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin, MessageCircle } from "lucide-react"
+import { Github, Linkedin, MessageCircle, Download } from "lucide-react"
 
 export function Footer() {
   return (
@@ -33,7 +33,22 @@ export function Footer() {
             <MessageCircle size={40} />
             <span className="sr-only">WhatsApp</span>
           </Link>
+
+
+          <Link
+  href="/cesar.rea.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-gray-400 transition-colors"
+>
+  <Download size={40} />
+  <span className="sr-only" >Descargar</span>
+</Link>
+
+
         </div>
+
+
         <div className="text-center mt-4">
           <p>&copy; {new Date().getFullYear()} Desarrollado por Cesar Rea.</p>
         </div>

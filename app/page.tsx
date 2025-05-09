@@ -57,7 +57,7 @@ export default function Home() {
           transition={{ delay: 1 }}
           className="text-2xl md:text-3xl text-gray-400 mt-4 text-center z-10"
         >
-          ⬇ Desarrollador de Software
+          ⬇ Desarrollador Fullstack : soluciones web seguras y escalables.
         </motion.h2>
       </motion.section>
       {/* Projects Section */}

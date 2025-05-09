@@ -52,7 +52,7 @@ export default function Home() {
 
         <figure className="relative z-10 mb-4 avatar-container">
           <motion.img
-            src="/cesar-compu3.jpeg"
+            src="/cesar-compu3.JPEG"
             alt="Retrato giratorio de Cesar Rea, desarrollador Fullstack"
             className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white object-cover cursor-pointer"
             style={{

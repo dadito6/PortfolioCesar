@@ -8,6 +8,7 @@ import { OrbitControls, PerspectiveCamera } from "@react-three/drei"
 import { Projects } from "./components/projects"
 import { Laptop } from "./components/laptop"
 import { Footer } from "./components/footer"
+import { Comentarios } from "./components/comentarios"
 import "../styles/globals.css"
 
 export default function Home() {
@@ -101,7 +102,7 @@ export default function Home() {
           <path d="M0,64L80,69.3C160,75,320,85,480,80 C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
         </svg>
       </div>
-
+      <Comentarios/>
       <Footer />
     </div>
   )

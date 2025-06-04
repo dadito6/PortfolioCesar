@@ -5,6 +5,7 @@ export function Comentarios() {
   const [comentario, setComentario] = useState('');
   const [email, setEmail] = useState('');
   const [mensajeEnvio, setMensajeEnvio] = useState('');
+  const [enviando, setEnviando] = useState(false); // NUEVO
 
   const submitComentario = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ export function Comentarios() {
     }
 
     try {
+      setEnviando(true); // NUEVO
       setMensajeEnvio('Enviando...');
       const response = await fetch('/api/enviar-mail', {
         method: 'POST',
@@ -38,11 +40,19 @@ export function Comentarios() {
       }
     } catch (error) {
       setMensajeEnvio('Error de conexión. Por favor intenta más tarde.');
+    } finally {
+      setEnviando(false); // NUEVO
     }
   };
 
   return (
-    <section className="py-12 px-2 animate-fade-in">
+    <section className="py-12 px-2 animate-fade-in relative">
+      {/* Barra de progreso */}
+      {enviando && (
+        <div className="absolute top-0 left-0 w-full h-1 z-20">
+          <div className="h-full bg-blue-500 animate-progress-bar rounded-t"></div>
+        </div>
+      )}
       <h2 className="font-bold mb-6 text-gray-50 text-2xl text-center">Deja tu comentario</h2>
       <div className="max-w-md mx-auto bg-gray-800 rounded-xl shadow-lg p-6">
         <form onSubmit={submitComentario} className="space-y-5">
@@ -82,8 +92,9 @@ export function Comentarios() {
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-white font-semibold text-lg transition"
+            disabled={enviando}
           >
-            Enviar
+            {enviando ? 'Enviando...' : 'Enviar'}
           </button>
         </form>
         {mensajeEnvio && (

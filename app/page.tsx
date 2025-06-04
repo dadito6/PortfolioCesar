@@ -3,20 +3,26 @@
 "use client"
 import { motion, useScroll, useTransform, useReducedMotion, useAnimation } from "framer-motion"
 import { useRef } from "react"
-import { Canvas } from "@react-three/fiber"
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei"
 import { Projects } from "./components/projects"
-import { Laptop } from "./components/laptop"
 import { Footer } from "./components/footer"
+import { useState } from "react";
 import { Comentarios } from "./components/comentarios"
+
 import "../styles/globals.css"
+
+import Link from "next/link"
+import LoginModal from "./components/LoginModal"
+import RegisterModal from "./components/RegisterModal"
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null)
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
   })
+
+
 
   const shouldReduceMotion = useReducedMotion()
   const controls = useAnimation()
@@ -94,6 +100,7 @@ export default function Home() {
           ⬇ Desarrollador Fullstack : soluciones web seguras y escalables.
         </motion.h2>
       </motion.section>
+
 
       <Projects />
 

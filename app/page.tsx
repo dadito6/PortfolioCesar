@@ -84,7 +84,7 @@ export default function Home() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/cesar-rea-275620304/"
+            href="https://www.linkedin.com/in/cesar-rea-706667373/"
             className="enlace-linkedin"
             aria-label="Visitar perfil de LinkedIn de Cesar Rea"
           >

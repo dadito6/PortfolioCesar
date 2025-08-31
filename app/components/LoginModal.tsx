@@ -68,7 +68,7 @@ export default function LoginModal({ onClose, onLogin }: { onClose: () => void, 
             className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded font-semibold"
             disabled={enviando}
           >
-            {enviando ? "Enviando..." : "Ingresar"}
+            {enviando ? "Enviando...  " : "Ingresar"}
           </button>
           {mensaje && <div className="text-center text-white">{mensaje}</div>}
         </form>

@@ -32,8 +32,8 @@ export function Comentarios() {
         setNombre('');
         setEmail('');
         setComentario('');
-        setMensajeEnvio('¡Gracias por tu opinión! Te responderé pronto.');
-        setTimeout(() => setMensajeEnvio(''), 5000);
+        setMensajeEnvio('¡Gracias por tu comentario! Te responderé pronto.');
+        setTimeout(() => setMensajeEnvio(''), 3000);
       } else {
         const errorData = await response.json();
         setMensajeEnvio(`Error: ${errorData.error || 'Intenta nuevamente'}`);
@@ -53,7 +53,7 @@ export function Comentarios() {
           <div className="h-full bg-blue-500 animate-progress-bar rounded-t"></div>
         </div>
       )}
-      <h2 className="font-bold mb-6 text-gray-50 text-2xl text-center">Deja tu comentario</h2>
+      <h2 className="font-bold mb-6 text-gray-50 text-2xl text-center">Contactate conmigo</h2>
       <div className="max-w-md mx-auto bg-gray-800 rounded-xl shadow-lg p-6">
         <form onSubmit={submitComentario} className="space-y-5">
           <div>
@@ -68,7 +68,7 @@ export function Comentarios() {
             />
           </div>
           <div>
-            <label className="block text-gray-300 mb-1" htmlFor="email">Email (opcional)</label>
+            <label className="block text-gray-300 mb-1" htmlFor="email">Email</label>
             <input
               id="email"
               type="email"
@@ -107,7 +107,7 @@ export function Comentarios() {
         )}
       </div>
       <div className="text-center text-gray-400 mt-4 text-sm">
-        <p>Los comentarios no son públicos. Solo yo los recibo directamente.</p>
+        <p>Te respondere a la brevedad, Gracias!  </p>
       </div>
     </section>
   );

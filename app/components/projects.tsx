@@ -27,6 +27,13 @@ const projects = [
     link:"https://github.com/carrera7/YateMate",
     tech: ["Django", "Python", "SQLite"],
   },
+  {
+    title: "Sitios Historicos Argentina",
+    description: "Sistema integral de gestion de Sitios Historicos",
+    image: "/efimero.jpg",
+    link:"https://grupo17.proyecto2025.linti.unlp.edu.ar/",
+    tech: ["Vue", "Flask", "PostgresSQl", "Oauth Google"],
+  },
 ]
 
 export function Projects() {

@@ -2,6 +2,18 @@
   "name": "my-v0-project",
   "version": "0.1.0",
   "private": true,
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "@react-three/fiber": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    },
+    "@react-three/drei": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  },
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",

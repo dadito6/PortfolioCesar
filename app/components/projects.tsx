@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { link } from "fs"
 import Image from "next/image"
 import Link from "next/link"
+import Snowfall from "react-snowfall"
 
 const projects = [
   {
@@ -38,6 +39,7 @@ const projects = [
 
 export function Projects() {
   return (
+    
     <section className="min-h-screen py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.h2
@@ -47,6 +49,7 @@ export function Projects() {
         >
           Proyectos
         </motion.h2>
+    
         <div className="grid gap-12">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />

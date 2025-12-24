@@ -15,9 +15,13 @@ export const metadata: Metadata = {
 export default function RootLayout({children,}: { children: React.ReactNode
 }) {
   return (
+    
     <html lang="es">
       <body className={inter.className} style={{ overflowX: "hidden" }}>
+    
+    
         <Header/>
+        
         <main style={{ paddingTop: "64px" /* Ajusta según la altura de tu header */ }}>
           {children}
         </main>

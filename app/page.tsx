@@ -7,7 +7,7 @@ import { Projects } from "./components/projects"
 import { Footer } from "./components/footer"
 import { useState } from "react";
 import { Comentarios } from "./components/comentarios"
-
+import {Snowfall} from "react-snowfall"
 import "../styles/globals.css"
 
 import Link from "next/link"
@@ -55,7 +55,7 @@ export default function Home() {
         style={{ opacity, scale }}
         className="h-screen relative flex flex-col items-center justify-center md:h-300"
       >
-
+<Snowfall></Snowfall>
 
         <figure className="relative z-10 mb-4 avatar-container">
           <motion.img
@@ -102,8 +102,8 @@ export default function Home() {
       </motion.section>
 
 
-      <Projects />
-
+      <Projects    />
+      
       <div className="relative w-full">
         <svg viewBox="0 0 1440 120" className="fill-white">
           <path d="M0,64L80,69.3C160,75,320,85,480,80 C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
